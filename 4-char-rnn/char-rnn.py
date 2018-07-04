@@ -8,6 +8,8 @@ Lecture 11
 """
 import os
 
+import utils
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 import random
 import sys
@@ -16,8 +18,6 @@ sys.path.append('..')
 import time
 
 import tensorflow as tf
-
-import utils
 
 
 def vocab_encode(text, vocab):
@@ -153,7 +153,6 @@ def main():
     lm = CharRNN(model)
     lm.create_model()
     lm.train()
-
 
 if __name__ == '__main__':
     main()
